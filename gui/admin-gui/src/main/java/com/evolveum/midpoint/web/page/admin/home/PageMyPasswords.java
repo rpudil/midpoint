@@ -205,9 +205,13 @@ public class PageMyPasswords extends PageAdminHome {
     private List<IColumn<PasswordAccountDto, String>> initColumns() {
         List<IColumn<PasswordAccountDto, String>> columns = new ArrayList<IColumn<PasswordAccountDto, String>>();
 
-        IColumn column = new CheckBoxHeaderColumn<UserType>();
-        columns.add(column);
+        // RPUDIL - 19.8.2014 - zruseno
+        // IColumn column = new CheckBoxHeaderColumn<UserType>();
+        // columns.add(column);
 
+        // RPUDIL - 19.8.2014 - pridano
+        IColumn column;
+        
         column = new PropertyColumn(createStringResource("PageMyPasswords.name"),
                 PasswordAccountDto.F_DISPLAY_NAME);
         columns.add(column);
@@ -216,11 +220,13 @@ public class PageMyPasswords extends PageAdminHome {
                 PasswordAccountDto.F_RESOURCE_NAME);
         columns.add(column);
 
+        // RPUDIL - 19.8.2014 - zruseno
+        /*
         CheckBoxColumn enabled = new CheckBoxColumn(createStringResource("PageMyPasswords.enabled"),
                 PasswordAccountDto.F_ENABLED);
         enabled.setEnabled(false);
         columns.add(enabled);
-
+        */
         return columns;
     }
 
@@ -250,6 +256,8 @@ public class PageMyPasswords extends PageAdminHome {
     }
 
     private void savePerformed(AjaxRequestTarget target) {
+        // RPUDIL - 19.8.2014 - zruseno
+		/*
         List<PasswordAccountDto> accounts = WebMiscUtil.getSelectedData(
                 (TablePanel) get(createComponentPath(ID_MAIN_FORM, ID_ACCOUNTS)));
         if (accounts.isEmpty()) {
@@ -257,7 +265,11 @@ public class PageMyPasswords extends PageAdminHome {
             target.add(getFeedbackPanel());
             return;
         }
+         */
 
+        // RPUDIL - 19.8.2014 - pridano ziskani userOID
+        String userOid = SecurityUtils.getPrincipalUser().getOid();
+        
         OperationResult result = new OperationResult(OPERATION_SAVE_PASSWORD);
         try {
             MyPasswordsDto dto = model.getObject();
@@ -271,6 +283,8 @@ public class PageMyPasswords extends PageAdminHome {
             Collection<ObjectDelta<? extends ObjectType>> deltas = new ArrayList<ObjectDelta<? extends ObjectType>>();
             
             
+            // RPUDIL - 19.8.2014 - zruseno zpracovani uctu
+            /*
             for (PasswordAccountDto accDto : accounts) {
                 PrismObjectDefinition objDef = accDto.isMidpoint() ?
                         registry.findObjectDefinitionByCompileTimeClass(UserType.class) :
@@ -283,6 +297,18 @@ public class PageMyPasswords extends PageAdminHome {
                 deltas.add(ObjectDelta.createModifyDelta(accDto.getOid(), delta, type, getPrismContext()));
                 
             }
+             */
+
+            // RPUDIL - 19.8.2014 - vlozeno upravene zpracovani uctu
+            PrismObjectDefinition objDef = registry.findObjectDefinitionByCompileTimeClass(UserType.class);
+
+            PropertyDelta delta = PropertyDelta.createModificationReplaceProperty(valuePath, objDef, password,password);
+
+            // RPUDIL - 19.8.2014 - vlozeno upravene zpracovani uctu
+            Class<? extends ObjectType> type = UserType.class;
+            // RPUDIL - 19.8.2014 - vlozeno upravene zpracovani delty uctu
+            deltas.add(ObjectDelta.createModifyDelta(userOid, delta, type, getPrismContext()));
+
             getModelService().executeChanges(deltas, null, createSimpleTask(OPERATION_SAVE_PASSWORD), result);
 
             result.recordSuccess();

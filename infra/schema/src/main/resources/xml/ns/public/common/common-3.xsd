@@ -1793,7 +1793,7 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-                                <a:displayName>Assignment</a:displayName>
+                                <a:displayName>Přiřazení</a:displayName>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -1871,8 +1871,8 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-		                    	<a:displayName>Full Name</a:displayName>
-		                    	<a:displayOrder>100</a:displayOrder>
+		                    	<a:displayName>Celé jméno</a:displayName>
+		                    	<a:displayOrder>150</a:displayOrder>
 		                    </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -1898,7 +1898,7 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-		                    	<a:displayName>Given Name</a:displayName>
+		                    	<a:displayName>Křestní</a:displayName>
 		                    	<a:displayOrder>110</a:displayOrder>
 		                    </xsd:appinfo>
                         </xsd:annotation>
@@ -1925,7 +1925,7 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-		                    	<a:displayName>Family Name</a:displayName>
+		                    	<a:displayName>Příjmení</a:displayName>
 		                    	<a:displayOrder>120</a:displayOrder>
 		                    </xsd:appinfo>
                         </xsd:annotation>
@@ -1948,8 +1948,9 @@
                                 </p> 
                             </xsd:documentation>
                             <xsd:appinfo>
-		                    	<a:displayName>Additional Name</a:displayName>
+		                    	<a:displayName>Další jméno</a:displayName>
 		                    	<a:displayOrder>130</a:displayOrder>
+								<a:ignore>true</a:ignore>
 		                    </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -1976,8 +1977,9 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-		                    	<a:displayName>Nickname</a:displayName>
+		                    	<a:displayName>Přezdívka</a:displayName>
 		                    	<a:displayOrder>140</a:displayOrder>
+								<a:ignore>true</a:ignore>
 		                    </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -2003,7 +2005,7 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-		                    	<a:displayName>Honorific Prefix</a:displayName>
+		                    	<a:displayName>Titul před</a:displayName>
 		                    	<a:displayOrder>150</a:displayOrder>
 		                    </xsd:appinfo>
                         </xsd:annotation>
@@ -2029,7 +2031,7 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-		                    	<a:displayName>Honorific Suffix</a:displayName>
+		                    	<a:displayName>Titul za</a:displayName>
 		                    	<a:displayOrder>160</a:displayOrder>
 		                    </xsd:appinfo>
                         </xsd:annotation>
@@ -2052,7 +2054,7 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-		                    	<a:displayName>Title</a:displayName>
+		                    	<a:displayName>Pracovní zařazení</a:displayName>
 		                    	<a:displayOrder>170</a:displayOrder>
 		                    </xsd:appinfo>
                         </xsd:annotation>
@@ -2078,6 +2080,7 @@
                             <xsd:appinfo>
 		                    	<a:displayName>Preferred Language</a:displayName>
 		                    	<a:displayOrder>200</a:displayOrder>
+								<a:ignore>true</a:ignore>
 		                    </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -2102,6 +2105,7 @@
                             <xsd:appinfo>
 		                    	<a:displayName>Locale</a:displayName>
 		                    	<a:displayOrder>210</a:displayOrder>
+								<a:ignore>true</a:ignore>
 		                    </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -2123,6 +2127,7 @@
                             <xsd:appinfo>
 		                    	<a:displayName>Timezone</a:displayName>
 		                    	<a:displayOrder>220</a:displayOrder>
+								<a:ignore>true</a:ignore>
 		                    </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -2140,7 +2145,7 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-                                <a:displayName>Email Address</a:displayName>
+                                <a:displayName>Email</a:displayName>
                                 <a:displayOrder>300</a:displayOrder>
                             </xsd:appinfo>
                         </xsd:annotation>
@@ -2173,6 +2178,7 @@
                             <xsd:appinfo>
                                 <a:displayName>Employee Number</a:displayName>
                                 <a:displayOrder>400</a:displayOrder>
+								<a:ignore>true</a:ignore>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -2196,6 +2202,7 @@
                             <xsd:appinfo>
                                 <a:displayName>Employee Type</a:displayName>
                                 <a:displayOrder>410</a:displayOrder>
+								<a:ignore>true</a:ignore>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -2217,6 +2224,7 @@
                             <xsd:appinfo>
                                 <a:displayName>Cost Center</a:displayName>
                                 <a:displayOrder>420</a:displayOrder>
+								<a:ignore>true</a:ignore>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -2237,8 +2245,9 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-                                <a:displayName>Organization</a:displayName>
+                                <a:displayName>Organizace</a:displayName>
                                 <a:displayOrder>430</a:displayOrder>
+								<a:ignore>true</a:ignore>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -2259,7 +2268,7 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-                                <a:displayName>Organizational Unit</a:displayName>
+                                <a:displayName>Oddělení</a:displayName>
                                 <a:displayOrder>440</a:displayOrder>
                             </xsd:appinfo>
                         </xsd:annotation>
@@ -2278,6 +2287,7 @@
                             <xsd:appinfo>
                                 <a:displayName>Locality</a:displayName>
                                 <a:displayOrder>450</a:displayOrder>
+								<a:ignore>true</a:ignore>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -2290,7 +2300,7 @@
                                 </p>
                             </xsd:documentation>
                             <xsd:appinfo>
-                                <a:displayName>Jpeg photo</a:displayName>
+                                <a:displayName>Foto</a:displayName>
                                 <a:displayOrder>460</a:displayOrder>
                             </xsd:appinfo>
                         </xsd:annotation>
@@ -2302,7 +2312,7 @@
                                 The set of user's credentials (such as passwords).
                             </xsd:documentation>
                             <xsd:appinfo>
-                                <a:displayName>Credentials</a:displayName>
+                                <a:displayName>Pověření</a:displayName>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
@@ -2348,14 +2358,14 @@
             <xsd:element name="password" type="tns:PasswordType" minOccurs="0" maxOccurs="1">
                 <xsd:annotation>
                     <xsd:appinfo>
-                        <a:displayName>Password</a:displayName>
+                        <a:displayName>Heslo</a:displayName>
                     </xsd:appinfo>
                 </xsd:annotation>
             </xsd:element>
             <xsd:element name="securityQuestions" type="tns:SecurityQuestionsCredentialsType" minOccurs="0" maxOccurs="1">
                 <xsd:annotation>
                     <xsd:appinfo>
-                        <a:displayName>Security Questions</a:displayName>
+                        <a:displayName>Bezpečnostní otázky</a:displayName>
                     </xsd:appinfo>
                 </xsd:annotation>
             </xsd:element>
@@ -2536,7 +2546,7 @@
             </xsd:documentation>
             <xsd:appinfo>
                 <a:container/>
-                <a:displayName>Assignment</a:displayName>
+                <a:displayName>Přiřazení</a:displayName>
             </xsd:appinfo>
         </xsd:annotation>
         <xsd:sequence>
@@ -2562,7 +2572,7 @@
                         </xsd:documentation>
                         <xsd:appinfo>
                     		<a:objectReference>tns:targetRef</a:objectReference>
-                            <a:displayName>Target</a:displayName>
+                            <a:displayName>Cíl</a:displayName>
                     	</xsd:appinfo>
                     </xsd:annotation>
                 </xsd:element>
@@ -2573,7 +2583,7 @@
                             TODO: target ref
                         </xsd:documentation>
                         <xsd:appinfo>
-                            <a:displayName>Target</a:displayName>
+                            <a:displayName>Cíl</a:displayName>
                         </xsd:appinfo>
                     </xsd:annotation>
                 </xsd:element>
@@ -2584,7 +2594,7 @@
                             TODO
                         </xsd:documentation>
                         <xsd:appinfo>
-                            <a:displayName>Construction</a:displayName>
+                            <a:displayName>Konstrukce</a:displayName>
                         </xsd:appinfo>
                     </xsd:annotation>
                 </xsd:element>
@@ -2683,7 +2693,7 @@
             </xsd:documentation>
             <xsd:appinfo>
                 <a:container/>
-                <a:displayName>Activation</a:displayName>
+                <a:displayName>Aktivace</a:displayName>
             </xsd:appinfo>
         </xsd:annotation>
         <xsd:sequence>
@@ -2707,7 +2717,7 @@
                         described concept is inactive.
                     </xsd:documentation>
                     <xsd:appinfo>
-                        <a:displayName>Administrative Status</a:displayName>
+                        <a:displayName>Administrativní status</a:displayName>
                     </xsd:appinfo>
                 </xsd:annotation>
             </xsd:element>
@@ -2727,7 +2737,7 @@
                         If this property is not present then the computation haven't taken place yet.
                     </xsd:documentation>
                     <xsd:appinfo>
-                        <a:displayName>Effective Status</a:displayName>
+                        <a:displayName>Efektivní status</a:displayName>
                     </xsd:appinfo>
                 </xsd:annotation>
             </xsd:element>
@@ -2738,7 +2748,7 @@
                         Not applied if the "enabled" flag is set to any value.
                     </xsd:documentation>
                     <xsd:appinfo>
-                        <a:displayName>Valid From</a:displayName>
+                        <a:displayName>Platný od</a:displayName>
                     </xsd:appinfo>
                 </xsd:annotation>
             </xsd:element>
@@ -2749,7 +2759,7 @@
                         Not applied if the "enabled" flag is set to any value.
                     </xsd:documentation>
                     <xsd:appinfo>
-                        <a:displayName>Valid To</a:displayName>
+                        <a:displayName>Platný do</a:displayName>
                     </xsd:appinfo>
                 </xsd:annotation>
             </xsd:element>

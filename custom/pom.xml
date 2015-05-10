@@ -51,4 +51,11 @@
 		<module>custom-foo</module>
 		-->
 	</modules>
+    <dependencies>
+        <dependency>
+            <groupId>cz.ami.idm.utils</groupId>
+            <artifactId>ami-java-utils</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
