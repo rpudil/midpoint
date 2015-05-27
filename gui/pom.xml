@@ -53,7 +53,6 @@
 
         <module>admin-gui-tr-TR</module>
         <module>admin-gui-es-ES</module>
-        <module>../../admin-gui-cs-CZ</module>
     </modules>
 
 </project>
